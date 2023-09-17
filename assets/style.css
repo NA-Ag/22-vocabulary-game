@@ -1,0 +1,210 @@
+/* @keyframes changeBackgroundColor {
+    0% {
+        background-image: radial-gradient(circle at 0% 0%, #ff5733, #ffc300); 
+        background-position: 0% 0%; 
+    }
+    100% {
+        background-image: radial-gradient(circle at 100% 100%, #ff5733, #ffc300); 
+        background-position: 100% 100%; 
+    }
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    /* animation: changeBackgroundColor 10s linear infinite; Change color every 10 seconds */
+}
+
+h1 {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    background-image: url('./trianglify1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    background-image: url('./trianglify1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+}
+
+.team-score {
+    flex: 1;
+}
+
+.whose-turn {
+    flex: 1;
+}
+
+.jeopardy-board {
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 20px;
+}
+
+.category-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.jeopardy-cell {
+    background-color: #4287f5;
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.jeopardy-cell:hover{
+    background-image: linear-gradient(to right, #1a61fa 0%, #fcfcfc  51%, #4090ff  100%);
+    text-align: center;
+    transition: 0.3s;
+    background-size: 300% auto;           
+    box-shadow: 5px 6px 3px #000c95;
+    border-radius: 1px;
+    display: block;
+    background-position: right center; 
+}
+
+.jeopardy-board > .category-column {
+    background-image: url('./trianglify1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.jeopardy-cell[data-points="0"] {
+    background-color: #999;
+}
+
+.jeopardy-cell[data-points="0"]:hover {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.question-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Background color with transparency */
+    z-index: 1000;
+    text-align: center;
+    padding-top: 10%;
+    box-sizing: border-box;
+    color: white; /* Text color */
+}
+
+
+.question-modal h2 {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+.question-modal p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+#user-answer {
+    width: 80%;
+    padding: 5px;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+#result {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#next-question {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#next-question:hover {
+    background-color: #555;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+/* Add media query for smaller screens (e.g., max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust Jeopardy Board for smaller screens */
+    .jeopardy-board {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Center align text in cells for smaller screens */
+    .jeopardy-cell {
+        text-align: center;
+    }
+
+    /* Adjust font size for smaller screens */
+    .jeopardy-cell {
+        font-size: 1.2em;
+    }
+
+    /* Adjust padding for smaller screens */
+    .jeopardy-cell {
+        padding: 5px;
+    }
+
+    /* Adjust spacing between cells for smaller screens */
+    .jeopardy-board {
+        grid-gap: 5px;
+    }
+
+    /* Adjust question modal for smaller screens */
+    .question-modal {
+        padding-top: 20%;
+    }
+
+    /* Adjust font size and padding for user answer input on smaller screens */
+    #user-answer {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    /* Adjust font size for result text on smaller screens */
+    #result {
+        font-size: 1em;
+    }
+
+    /* Adjust font size and padding for next question button on smaller screens */
+    #next-question {
+        font-size: 1em;
+        padding: 10px;
+    }
+}

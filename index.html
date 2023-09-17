@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Vocabulary Jeopardy Game</title>
+</head>
+<body id="particles-js">
+        <h1>Vocabulary Jeopardy Game</h1>
+    
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <div class="team-score">
+                <h2 id="team-1-score">Team 1 Score: 0</h2>
+            </div>
+            <div class="team-score">
+                <h2 id="team-2-score">Team 2 Score: 0</h2>
+            </div>
+            <div class="whose-turn">
+                <h2 id="whose-turn">Team 1's Turn</h2>
+            </div>
+        </div>
+
+
+    <!-- Jeopardy Board -->
+    <div class="jeopardy-board">
+        <!-- Category 1: Vocabulary -->
+        <div class="category-column">
+            <h2>Vocabulary</h2>
+            <div class="jeopardy-cell" data-category="Vocabulary" data-points="100">100</div>
+            <div class="jeopardy-cell" data-category="Vocabulary" data-points="200">200</div>
+            <div class="jeopardy-cell" data-category="Vocabulary" data-points="300">300</div>
+        </div>
+    
+        <!-- Category 2: Synonyms -->
+        <div class="category-column">
+            <h2>Synonyms</h2>
+            <div class="jeopardy-cell" data-category="Synonyms" data-points="100">100</div>
+            <div class="jeopardy-cell" data-category="Synonyms" data-points="200">200</div>
+            <div class="jeopardy-cell" data-category="Synonyms" data-points="300">300</div>
+        </div>
+    
+        <!-- Category 3: Antonyms -->
+        <div class="category-column">
+            <h2>Antonyms</h2>
+            <div class="jeopardy-cell" data-category="Antonyms" data-points="100">100</div>
+            <div class="jeopardy-cell" data-category="Antonyms" data-points="200">200</div>
+            <div class="jeopardy-cell" data-category="Antonyms" data-points="300">300</div>
+        </div>
+    
+        <!-- Category 4: Definitions -->
+        <div class="category-column">
+            <h2>Definitions</h2>
+            <div class="jeopardy-cell" data-category="Definitions" data-points="100">100</div>
+            <div class="jeopardy-cell" data-category="Definitions" data-points="200">200</div>
+            <div class="jeopardy-cell" data-category="Definitions" data-points="300">300</div>
+        </div>
+    </div>
+    <!-- End Jeopardy Board-->
+
+    <!-- Question Modal -->
+    <div class="question-modal" id="question-modal">
+        <h2 id="category"></h2>
+        <p id="question"></p>
+        <input type="text" id="user-answer" placeholder="Your Answer">
+        <button id="check-answer">Check Answer</button>
+        <p id="result"></p>
+        <button id="next-question">Next Question</button>
+    </div>
+    <!-- End Question Modal-->
+
+    <script src="./assets/index.js"></script>
+    <script src="./assets/particles.js"></script>
+</body>
+</html>
